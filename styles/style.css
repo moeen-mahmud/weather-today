@@ -1,0 +1,21 @@
+body {
+  background: url(/images/bg-image.jpg) no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+.weather-status {
+  background-color: hsl(206, 72%, 11%);
+  padding: 2rem;
+  width: 50%;
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: 6px 15px 40px -12px hsla(240, 33%, 18%, 0.25);
+}
+.btn {
+  background-color: hsl(206, 72%, 11%);
+  color: hsl(0, 0%, 96%);
+}
+.btn:hover {
+  background-color: hsl(0, 0%, 96%);
+  color: hsl(206, 72%, 11%);
+}

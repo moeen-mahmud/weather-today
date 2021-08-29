@@ -14,26 +14,9 @@
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     />
-    <style>
-      body {
-        background: url(images/bg-image.jpg) no-repeat;
-        background-size: cover;
-        height: 100vh;
-      }
-      .weather-status {
-        background-color: #082032;
-        padding: 2rem;
-        width: 50%;
-        margin: 0 auto;
-        border-radius: 10px;
-        box-shadow: 6px 15px 40px -12px rgba(30, 30, 60, 0.25);
-      }
-      .btn {
-        background-color: #082032;
-        color: whitesmoke;
-      }
-    </style>
   </head>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./styles/style.css" />
 
   <body>
     <div class="container">
@@ -52,7 +35,7 @@
           </div>
         </div>
       </form>
-      <div class="weather-status text-white text-center">
+      <div id="weather-status" class="weather-status text-white text-center">
         <img
           id="condition-icon"
           src="https://openweathermap.org/img/wn/04d@2x.png "
