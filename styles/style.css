@@ -12,10 +12,10 @@ body {
   box-shadow: 6px 15px 40px -12px hsla(240, 33%, 18%, 0.25);
 }
 .btn {
-  background-color: hsl(206, 72%, 11%);
-  color: hsl(0, 0%, 96%);
+  background-color: hsl(206, 72%, 11%) !important;
+  color: hsl(0, 0%, 96%) !important;
 }
 .btn:hover {
-  background-color: hsl(0, 0%, 96%);
-  color: hsl(206, 72%, 11%);
+  background-color: hsl(0, 0%, 96%) !important;
+  color: hsl(206, 72%, 11%) !important;
 }
