@@ -17,6 +17,7 @@ const displayWeather = (ordinate) => {
   const icon = document.getElementById("condition-icon");
   location.innerText = `${ordinate.name}`;
   temp.innerText = `${ordinate.main.temp}`;
+  const mainDes = `${ordinate.weather.map((con) => `${con.main}`)}`;
   condition.innerText = `${ordinate.weather.map((con) => `${con.main}`)}`;
   icon.setAttribute(
     `src`,
@@ -24,4 +25,18 @@ const displayWeather = (ordinate) => {
       (ico) => `${ico.icon}`
     )}@2x.png`
   );
+  changeBg(mainDes);
+};
+
+const changeBg = (condition) => {
+  if (condition === "Clear") {
+    document.body.style.backgroundImage = "url(images/sunny-bg-webp.webp)";
+  } else if (condition === "Rain") {
+    document.body.style.backgroundImage = "url(images/rainy-bg-webp.webp)";
+  } else if (condition === "Snow") {
+    document.body.style.backgroundImage = "url(images/snow-webp.webp)";
+  } else if (condition === "Clouds") {
+    document.body.style.backgroundImage =
+      "url(images/scattered-cloud-webp.webp)";
+  }
 };

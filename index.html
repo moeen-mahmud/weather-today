@@ -20,6 +20,18 @@
         background-size: cover;
         height: 100vh;
       }
+      .weather-status {
+        background-color: #082032;
+        padding: 2rem;
+        width: 50%;
+        margin: 0 auto;
+        border-radius: 10px;
+        box-shadow: 6px 15px 40px -12px rgba(30, 30, 60, 0.25);
+      }
+      .btn {
+        background-color: #082032;
+        color: whitesmoke;
+      }
     </style>
   </head>
 
@@ -34,7 +46,7 @@
             placeholder="Enter a location for Weather ..."
           />
           <div class="input-group-append">
-            <button onclick="searchCity()" type="button" class="btn btn-danger">
+            <button onclick="searchCity()" type="button" class="btn">
               Search
             </button>
           </div>
