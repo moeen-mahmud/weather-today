@@ -29,17 +29,26 @@ const displayWeather = (ordinate) => {
   const temp = document.getElementById("temp");
   const condition = document.getElementById("condition");
   const icon = document.getElementById("condition-icon");
-  location.innerText = `${ordinate.name}`;
-  temp.innerText = `${ordinate.main.temp}`;
-  const mainDes = `${ordinate.weather.map((con) => `${con.main}`)}`;
-  condition.innerText = `${ordinate.weather.map((con) => `${con.main}`)}`;
-  icon.setAttribute(
-    `src`,
-    `https://openweathermap.org/img/wn/${ordinate.weather.map(
-      (ico) => `${ico.icon}`
-    )}@2x.png`
-  );
-  changeBg(mainDes);
+  const tempBlock = document.getElementById("temp-block");
+  if (ordinate.name && ordinate.main.temp) {
+    location.innerText = `${ordinate.name}`;
+    temp.innerText = `${ordinate.main.temp}`;
+    const mainDes = `${ordinate.weather.map((con) => `${con.main}`)}`;
+    condition.innerText = `${ordinate.weather.map((con) => `${con.main}`)}`;
+    icon.setAttribute(
+      `src`,
+      `https://openweathermap.org/img/wn/${ordinate.weather.map(
+        (ico) => `${ico.icon}`
+      )}@2x.png`
+    );
+    changeBg(mainDes);
+  } else {
+    location.innerText = `No city found`;
+    temp.innerText = ``;
+    condition.innerText = ``;
+    tempBlock.innerText = ``;
+    icon.setAttribute(`src`, `images/dissapointment-face.png`);
+  }
 };
 
 // Functionality for changing the background image
